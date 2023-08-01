@@ -1,6 +1,6 @@
-package com.eurotech.pages;
+package com.myProject.pages;
 
-import com.eurotech.utilities.Driver;
+import com.myProject.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,13 +15,8 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(),this);
     }
 
-    //public abstract void verifyPageTitle();
-
-    @FindBy(css = ".nav-item")
+    @FindBy(css = ".navbar-nav>li")
     public List<WebElement> tabMenu;
-
-    @FindBy(css = ".d-none.d-md-block.dropdown-toggle.ps-2")
-    public WebElement userNameAtRightTop;
 
     public List<String> getTabMenuNames(){
         List<String> list = new ArrayList<>();
@@ -32,21 +27,8 @@ public abstract class BasePage {
         return list;
     }
 
-    public void navigateToTabsAndModules(String tabName){
-        WebElement tab = Driver.get().findElement(By.xpath("//span[text()='" + tabName + "']"));
+    public void navigateToTabs(String tabName){
+        WebElement tab = Driver.get().findElement(By.xpath("//a[contains(text(),'"+tabName+"')]"));
         tab.click();
     }
-
-    public void navigateToTabsAndModules(String tabName, String moduleName){
-        WebElement tab = Driver.get().findElement(By.xpath("//span[text()='" + tabName + "']"));
-        tab.click();
-
-        WebElement module = Driver.get().findElement(By.xpath("//span[text()='" + moduleName + "']"));
-        module.click();
-    }
-
-    public String getUsernameText(){
-        return userNameAtRightTop.getText();
-    }
-
 }
