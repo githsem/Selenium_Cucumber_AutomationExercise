@@ -1,4 +1,4 @@
-package com.eurotech.runners;
+package com.myProject.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -11,9 +11,8 @@ import org.junit.runner.RunWith;
                 "html:target/default-html-reports.html"
         },
         features = "src/test/resources/features",
-        glue = "com/eurotech/stepDefinitions",
-        dryRun = false,
-        tags = "@wip"
+        glue = "com/myProject/stepDefinitions",
+        dryRun = false
 
 )
 public class CukesRunner {
