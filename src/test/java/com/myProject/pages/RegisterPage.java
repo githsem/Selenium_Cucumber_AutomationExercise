@@ -54,6 +54,16 @@ public class RegisterPage extends BasePage{
     @FindBy(id = "dismiss-button")
     public WebElement dismissButton;
 
+    @FindBy(xpath = "//a[contains(text(),'Logged in')]")
+    public WebElement loggedInText;
+
+    @FindBy(xpath = "//a[.=' Delete Account']")
+    public WebElement deleteAccountButton;
+
+    @FindBy(css = ".title.text-center")
+    public WebElement accountDeletedText;
+
+
 
 
     public void fillForm(){

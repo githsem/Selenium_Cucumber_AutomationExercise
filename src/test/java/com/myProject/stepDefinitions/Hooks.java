@@ -1,6 +1,6 @@
-package com.eurotech.stepDefinitions;
+package com.myProject.stepDefinitions;
 
-import com.eurotech.utilities.Driver;
+import com.myProject.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -23,16 +23,6 @@ public class Hooks {
             scenario.attach(screenshot,"image/png","screenshot");
         }
         Driver.closeDriver();
-    }
-
-    @Before(value = "@database", order = 1)
-    public void openDatabase() {
-        System.out.println("DataBase is opening");
-    }
-
-    @After(value = "@database", order = 1)
-    public void closeDatabase() {
-        System.out.println("DataBase is closing");
     }
 
 }
