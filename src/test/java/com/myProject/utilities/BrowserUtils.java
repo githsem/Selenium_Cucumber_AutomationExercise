@@ -1,4 +1,4 @@
-package com.eurotech.utilities;
+package com.myProject.utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
