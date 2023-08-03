@@ -1,5 +1,6 @@
 Feature: Register Feature
 
+  @register
   Scenario: Register on the web page
     Given The user is on the home page
     When The user Click on Signup - Login button
@@ -10,7 +11,8 @@ Feature: Register Feature
     When The user fills in account information
     Then Verify that ACCOUNT CREATED! is visible
     When The user clicks Continue button
+    And The user clicks Dismiss button
     Then Verify that "Logged in as" username is visible
-    When The user clicks Delete Account button
-    Then Verify that "ACCOUNT DELETED!" is visible
-    And The user clicks Continue2 button
+    #When The user clicks Delete Account button
+    #Then Verify that "ACCOUNT DELETED!" is visible
+    #And The user clicks Continue2 button

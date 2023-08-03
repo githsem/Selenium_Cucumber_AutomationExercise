@@ -66,7 +66,11 @@ public class Register_StepDefs {
     @When("The user clicks Continue button")
     public void the_user_clicks_continue_button() {
         registerPage.continueButton.click();
-        Driver.get().switchTo().frame("aswift_4");
+    }
+
+    @When("The user clicks Dismiss button")
+    public void the_user_clicks_dismiss_button() {
+        Driver.get().switchTo().frame("aswift_3");
         Driver.get().switchTo().frame("ad_iframe");
         registerPage.dismissButton.click();
     }
