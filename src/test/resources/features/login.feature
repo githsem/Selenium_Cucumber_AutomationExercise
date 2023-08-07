@@ -1,3 +1,4 @@
+@regression
 Feature: Login Feature
 
   @login
@@ -10,4 +11,25 @@ Feature: Login Feature
     Then Verify that "Logged in as" username is visible
     When The user clicks Delete Account button
     Then Verify that ACCOUNT DELETED! is visible
+
+  @wip
+  Scenario: Login User with incorrect email and password
+    Given The user is on the home page
+    When The user Click on Signup - Login button
+    Then Verify Login to your account is visible
+    When The user enters incorrect email address and password
+    And The user click login button
+    Then Verify error Your email or password is incorrect! is visible
+
+  @logout
+  Scenario: Logout User
+    Given The user is on the home page
+    When The user Click on Signup - Login button
+    Then Verify Login to your account is visible
+    When The user enters correct email address and password
+    And The user click login button
+    Then Verify that "Logged in as" username is visible
+    When The user clicks logout button
+    Then Verify that user is navigated to login page
+
 
