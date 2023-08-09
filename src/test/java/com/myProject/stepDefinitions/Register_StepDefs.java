@@ -71,7 +71,6 @@ public class Register_StepDefs {
     @When("The user clicks Dismiss button")
     public void the_user_clicks_dismiss_button() {
         Driver.get().switchTo().frame("aswift_3");
-        Driver.get().switchTo().frame("ad_iframe");
         registerPage.dismissButton.click();
     }
 
@@ -96,6 +95,11 @@ public class Register_StepDefs {
     @When("The user clicks Continue2 button")
     public void the_user_clicks_continue2_button() {
         registerPage.continueButton.click();
+    }
+
+    @Then("Verify error Email Address already exist! is visible")
+    public void verify_error_email_address_already_exist_is_visible() {
+        BrowserUtils.verifyElementDisplayed(registerPage.alreadyExistText);
     }
 
 }

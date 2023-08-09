@@ -34,4 +34,24 @@ public class Login_StepDefs {
         String actualText = registerPage.accountDeletedText.getText();
         Assert.assertEquals(expectedText,actualText);
     }
+
+    @When("The user enters incorrect email address and password")
+    public void the_user_enters_incorrect_email_address_and_password() {
+        loginPage.wrongLoginInfo();
+    }
+    @Then("Verify error Your email or password is incorrect! is visible")
+    public void verify_error_your_email_or_password_is_incorrect_is_visible() {
+        Assert.assertTrue(loginPage.incorrectText.isDisplayed());
+    }
+
+    @When("The user clicks logout button")
+    public void the_user_clicks_logout_button() {
+        loginPage.logoutButton.click();
+    }
+    @Then("Verify that user is navigated to login page")
+    public void verify_that_user_is_navigated_to_login_page() {
+        String expectedUrl = "https://www.automationexercise.com/login";
+        String actualUrl = Driver.get().getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
 }

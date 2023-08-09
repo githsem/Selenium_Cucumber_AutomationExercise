@@ -25,10 +25,21 @@ public class LoginPage extends BasePage{
     @FindBy(id = "dismiss-button")
     public WebElement dismissButton;
 
+    @FindBy(xpath = "//p[contains(text(),'incorrect')]")
+    public WebElement incorrectText;
+
+    @FindBy(xpath = "//a[.=' Logout']")
+    public WebElement logoutButton;
+
 
     public void loginInfo(){
         loginEmailBox.sendKeys(ConfigurationReader.get("email"));
         loginPasswordBox.sendKeys(ConfigurationReader.get("password"));
+    }
+
+    public void wrongLoginInfo(){
+        loginEmailBox.sendKeys("wrongEmail@mail.com");
+        loginPasswordBox.sendKeys("wrongPassword");
     }
 
     public void login(){
