@@ -63,7 +63,8 @@ public class RegisterPage extends BasePage{
     @FindBy(css = ".title.text-center")
     public WebElement accountDeletedText;
 
-
+    @FindBy(xpath = "//p[.='Email Address already exist!']")
+    public WebElement alreadyExistText;
 
 
     public void fillForm(){
