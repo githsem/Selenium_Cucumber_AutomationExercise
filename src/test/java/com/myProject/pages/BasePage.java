@@ -31,4 +31,5 @@ public abstract class BasePage {
         WebElement tab = Driver.get().findElement(By.xpath("//a[contains(text(),'"+tabName+"')]"));
         tab.click();
     }
+
 }
