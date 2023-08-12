@@ -22,8 +22,4 @@ public class CheckOut_StepDefs {
         checkOutPage.commentTextBox.sendKeys("myComment" + Keys.TAB + Keys.ENTER);
     }
 
-    @When("The user clicks Pay and Confirm Order button")
-    public void the_user_clicks_pay_and_confirm_order_button() {
-
-    }
 }
