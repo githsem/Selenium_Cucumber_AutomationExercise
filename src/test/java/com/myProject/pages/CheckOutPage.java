@@ -10,8 +10,11 @@ import java.util.List;
 
 public class CheckOutPage extends BasePage{
 
-    @FindBy(xpath = "//li[.='myAddress']")
-    public WebElement addressText;
+    @FindBy(xpath = "(//li[.='myAddress'])[1]")
+    public WebElement deliveryAddressText;
+
+    @FindBy(xpath = "(//li[.='myAddress'])[2]")
+    public WebElement billingAddressText;
 
     @FindBy(tagName = "textarea")
     public WebElement commentTextBox;
