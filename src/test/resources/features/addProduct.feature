@@ -1,7 +1,7 @@
 @regression
 Feature: Add Product
 
-  @addProduct1
+  @smoke @addProduct1
   Scenario: Add Products in Cart
     Given The user is on the home page
     When The user clicks "Products" menu button
