@@ -19,11 +19,21 @@ public class Register_StepDefs {
     @Given("The user is on the home page")
     public void the_user_is_on_the_home_page() {
         Driver.get().get(ConfigurationReader.get("url"));
+        String expectedUrl = "https://www.automationexercise.com/";
+        Assert.assertEquals(Driver.get().getCurrentUrl(),expectedUrl);
     }
 
-    @When("The user Click on Signup - Login button")
-    public void the_user_click_on_signup_login_button() {
-        homePage.navigateToTabs("Signup / Login");
+    @When("The user clicks {string} menu button")
+    public void the_user_clicks_menu_button(String tabName) {
+        homePage.navigateToTabs(tabName);
+        try {
+            Driver.get().switchTo().frame("aswift_9");
+            Driver.get().switchTo().frame("ad_iframe");
+            registerPage.dismissButton.click();
+        }catch (Exception e){
+
+        }
+
     }
 
     @Then("Verify New User Signup! is visible")
@@ -74,9 +84,9 @@ public class Register_StepDefs {
         registerPage.dismissButton.click();
     }
 
-    @Then("Verify that {string} username is visible")
-    public void verify_that_username_is_visible(String string) {
-        String expectedText = string +" "+ ConfigurationReader.get("firstName");
+    @Then("Verify that Logged in as username is visible")
+    public void verify_that_logged_in_as_username_is_visible() {
+        String expectedText = "Logged in as "+ ConfigurationReader.get("firstName");
         String actualText = registerPage.loggedInText.getText();
         Assert.assertEquals(expectedText,actualText);
     }
