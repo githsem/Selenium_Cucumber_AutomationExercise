@@ -1,3 +1,4 @@
+@regression
 Feature: Address Details
 
   @addressDetails
