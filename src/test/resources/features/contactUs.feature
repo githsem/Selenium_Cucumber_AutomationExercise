@@ -1,4 +1,5 @@
-Feature: Contact Us Form Feature
+@regression
+Feature: Contact Us Form
 
   @contact
   Scenario: Contact Us Form
