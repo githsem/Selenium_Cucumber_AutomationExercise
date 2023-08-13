@@ -21,15 +21,15 @@ public class Login_StepDefs {
     public void the_user_enters_correct_email_address_and_password() {
         loginPage.loginInfo();
     }
-    @When("The user click login button")
-    public void the_user_click_login_button() {
+    @When("The user clicks login button")
+    public void the_user_clicks_login_button() {
         loginPage.login();
     }
 
     @Then("Verify that ACCOUNT DELETED! is visible")
     public void verify_that_account_deleted_is_visible() {
-        Driver.get().switchTo().frame("aswift_2");
-        loginPage.dismissButton.click();
+        //Driver.get().switchTo().frame("aswift_2");
+        //loginPage.dismissButton.click();
         String expectedText = "ACCOUNT DELETED!";
         String actualText = registerPage.accountDeletedText.getText();
         Assert.assertEquals(expectedText,actualText);
@@ -44,10 +44,6 @@ public class Login_StepDefs {
         Assert.assertTrue(loginPage.incorrectText.isDisplayed());
     }
 
-    @When("The user clicks logout button")
-    public void the_user_clicks_logout_button() {
-        loginPage.logoutButton.click();
-    }
     @Then("Verify that user is navigated to login page")
     public void verify_that_user_is_navigated_to_login_page() {
         String expectedUrl = "https://www.automationexercise.com/login";
