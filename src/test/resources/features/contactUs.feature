@@ -1,7 +1,7 @@
 @regression
 Feature: Contact Us Form
 
-  @contact
+  @smoke @contact
   Scenario: Contact Us Form
     Given The user is on the home page
     When The user clicks "Contact us" menu button
