@@ -3,7 +3,7 @@ package com.myProject.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CategoryProductPage extends BasePage{
+public class CategoryProductPage extends BasePage {
 
     @FindBy(xpath = "//h2[.='Women - Dress Products']")
     public WebElement womenDressProductsText;

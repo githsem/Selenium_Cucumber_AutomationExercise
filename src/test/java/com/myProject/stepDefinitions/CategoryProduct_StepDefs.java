@@ -14,8 +14,8 @@ public class CategoryProduct_StepDefs {
 
     @Then("Verify that category page is displayed and confirm text women Dress PRODUCTS")
     public void verify_that_category_page_is_displayed_and_confirm_text_women_dress_products() {
-        BrowserUtils.waitForVisibility(categoryProductPage.womenDressProductsText,5);
-        Assert.assertEquals("WOMEN - DRESS PRODUCTS",categoryProductPage.womenDressProductsText.getText());
+        BrowserUtils.waitForVisibility(categoryProductPage.womenDressProductsText, 5);
+        Assert.assertEquals("WOMEN - DRESS PRODUCTS", categoryProductPage.womenDressProductsText.getText());
     }
 
     @When("The user clicks on Men category")
@@ -30,6 +30,6 @@ public class CategoryProduct_StepDefs {
 
     @Then("Verify that category page is displayed and confirm text men Tshirts PRODUCTS")
     public void verify_that_category_page_is_displayed_and_confirm_text_men_tshirts_products() {
-        Assert.assertEquals("MEN - TSHIRTS PRODUCTS",categoryProductPage.menTshirtsProductsText.getText());
+        Assert.assertEquals("MEN - TSHIRTS PRODUCTS", categoryProductPage.menTshirtsProductsText.getText());
     }
 }
