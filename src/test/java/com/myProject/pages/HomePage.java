@@ -41,4 +41,10 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//div[@id='recommended-item-carousel']//a[@class='btn btn-default add-to-cart']")
     public List<WebElement> recommendedItemsList;
 
+    @FindBy(id = "scrollUp")
+    public WebElement scrollUpArrow;
+
+    @FindBy(xpath = "//h2[.='Full-Fledged practice website for Automation Engineers']")
+    public WebElement fullFlaggedText;
+
 }

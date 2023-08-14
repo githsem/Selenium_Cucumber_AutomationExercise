@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class ContactUsPage extends BasePage{
+public class ContactUsPage extends BasePage {
     Actions actions = new Actions(Driver.get());
 
     @FindBy(xpath = "//h2[.='Get In Touch']")
@@ -30,7 +30,7 @@ public class ContactUsPage extends BasePage{
     @FindBy(id = "dismiss-button")
     public WebElement dismissButton;
 
-    public void fillContactUsForm(){
+    public void fillContactUsForm() {
         actions.click(nameBox)
                 .sendKeys("myName" + Keys.TAB)
                 .sendKeys("myEmail@email.com" + Keys.TAB)
@@ -39,7 +39,7 @@ public class ContactUsPage extends BasePage{
                 .perform();
     }
 
-    public void uploadFile(){
+    public void uploadFile() {
         String projectPath = System.getProperty("user.dir");
         String filePath = "src/test/resources/test.txt";
         String fullPath = projectPath + "/" + filePath;
