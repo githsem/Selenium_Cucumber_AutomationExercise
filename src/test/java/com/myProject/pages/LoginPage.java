@@ -6,7 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
     @FindBy(xpath = "//h2[.='Login to your account']")
     public WebElement loginYourAccountText;
 
@@ -32,17 +32,17 @@ public class LoginPage extends BasePage{
     public WebElement logoutButton;
 
 
-    public void loginInfo(){
+    public void loginInfo() {
         loginEmailBox.sendKeys(ConfigurationReader.get("email"));
         loginPasswordBox.sendKeys(ConfigurationReader.get("password"));
     }
 
-    public void wrongLoginInfo(){
+    public void wrongLoginInfo() {
         loginEmailBox.sendKeys("wrongEmail@mail.com");
         loginPasswordBox.sendKeys("wrongPassword");
     }
 
-    public void login(){
+    public void login() {
         loginButton.click();
     }
 
