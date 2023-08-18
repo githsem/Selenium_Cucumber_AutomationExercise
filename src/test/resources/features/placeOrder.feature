@@ -1,7 +1,7 @@
 @regression
 Feature: Place Order
 
-  @placeOrder1
+  @smoke @placeOrder1
   Scenario: Register while Checkout
     Given The user is on the home page
     When The user hovers over first product and clicks Add to cart

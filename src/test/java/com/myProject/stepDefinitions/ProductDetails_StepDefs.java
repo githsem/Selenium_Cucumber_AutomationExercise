@@ -13,13 +13,14 @@ public class ProductDetails_StepDefs {
     @Then("Verify product detail is opened")
     public void verify_product_detail_is_opened() {
         String expectedUrl = "https://www.automationexercise.com/product_details/1";
-        Assert.assertEquals(Driver.get().getCurrentUrl(),expectedUrl);
+        Assert.assertEquals(Driver.get().getCurrentUrl(), expectedUrl);
     }
 
     @When("The user increases quantity to {string}")
     public void the_user_increases_quantity_to(String string) {
-        BrowserUtils.clearAndSendKeys(productDetailsPage.quantityBox,string);
+        BrowserUtils.clearAndSendKeys(productDetailsPage.quantityBox, string);
     }
+
     @When("The user clicks Add to cart button")
     public void the_user_clicks_add_to_cart_button() {
         productDetailsPage.addToCartButton.click();
