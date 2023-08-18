@@ -1,6 +1,7 @@
+@regression
 Feature: Invoice
 
-  @invoice
+  @smoke @invoice
   Scenario: Download Invoice after purchase order
     Given The user is on the home page
     When The user hovers over first product and clicks Add to cart
