@@ -2,13 +2,9 @@ package com.myProject.stepDefinitions;
 
 import com.myProject.pages.PaymentPage;
 import com.myProject.utilities.BrowserUtils;
-import com.myProject.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class Payment_StepDefs {
     PaymentPage paymentPage = new PaymentPage();

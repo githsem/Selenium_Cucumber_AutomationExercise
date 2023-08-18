@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 
 import java.io.File;
 
-public class PaymentPage extends BasePage{
+public class PaymentPage extends BasePage {
     Actions actions = new Actions(Driver.get());
 
     @FindBy(name = "name_on_card")
@@ -25,7 +25,6 @@ public class PaymentPage extends BasePage{
 
     @FindBy(xpath = "//a[.='Download Invoice']")
     public WebElement downloadInvoiceButton;
-
 
 
     public void fillCardDetails() {
