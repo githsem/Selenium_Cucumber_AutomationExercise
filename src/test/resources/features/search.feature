@@ -10,7 +10,7 @@ Feature: Search
     Then Verify SEARCHED PRODUCTS is visible
     And Verify all the products related to search are visible
 
-  @search2
+  @smoke @search2
   Scenario: Search Products and Verify Cart After Login
     Given The user is on the home page
     When The user clicks "Products" menu button
