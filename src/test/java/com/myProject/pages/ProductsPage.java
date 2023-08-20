@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ProductsPage extends BasePage{
+public class ProductsPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='features_items']//div[@class='col-sm-4']")
     public List<WebElement> productsList;
@@ -49,6 +49,6 @@ public class ProductsPage extends BasePage{
     public WebElement brandsText;
 
     public void clickBrandName(String brand) {
-        Driver.get().findElement(By.xpath("//div[@class='brands-name']//a[contains(.,'"+brand+"')]")).click();
+        Driver.get().findElement(By.xpath("//div[@class='brands-name']//a[contains(.,'" + brand + "')]")).click();
     }
 }
