@@ -1,7 +1,7 @@
 @regression
 Feature: Remove Products
 
-  @remove
+  @smoke @remove
   Scenario: Remove Products From Cart
     Given The user is on the home page
     When The user hovers over first product and clicks Add to cart

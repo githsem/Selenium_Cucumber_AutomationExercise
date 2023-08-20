@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class RegisterPage extends BasePage{
+public class RegisterPage extends BasePage {
 
     Actions actions = new Actions(Driver.get());
 
@@ -67,7 +67,7 @@ public class RegisterPage extends BasePage{
     public WebElement alreadyExistText;
 
 
-    public void fillForm(){
+    public void fillForm() {
 
         Select select1 = new Select(selectDay);
         select1.selectByVisibleText("1");
@@ -78,20 +78,6 @@ public class RegisterPage extends BasePage{
         Select select4 = new Select(selectCountry);
         select4.selectByVisibleText("Canada");
 
-        actions.click(genderButton)
-                .sendKeys(Keys.TAB)
-                .sendKeys(Keys.TAB)
-                .sendKeys(ConfigurationReader.get("password") + Keys.TAB + Keys.TAB + Keys.TAB + Keys.TAB )
-                .click(newsletterBox)
-                .sendKeys(Keys.TAB)
-                .sendKeys(Keys.TAB)
-                .sendKeys(ConfigurationReader.get("firstName") + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("lastName") + Keys.TAB + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("address") + Keys.TAB + Keys.TAB + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("state") + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("city") + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("zipcode") + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("mobilNumber") + Keys.ENTER)
-                .perform();
+        actions.click(genderButton).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(ConfigurationReader.get("password") + Keys.TAB + Keys.TAB + Keys.TAB + Keys.TAB).click(newsletterBox).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(ConfigurationReader.get("firstName") + Keys.TAB).sendKeys(ConfigurationReader.get("lastName") + Keys.TAB + Keys.TAB).sendKeys(ConfigurationReader.get("address") + Keys.TAB + Keys.TAB + Keys.TAB).sendKeys(ConfigurationReader.get("state") + Keys.TAB).sendKeys(ConfigurationReader.get("city") + Keys.TAB).sendKeys(ConfigurationReader.get("zipcode") + Keys.TAB).sendKeys(ConfigurationReader.get("mobilNumber") + Keys.ENTER).perform();
     }
 }
