@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class ProductDetailsPage extends BasePage{
+public class ProductDetailsPage extends BasePage {
     Actions actions = new Actions(Driver.get());
 
     @FindBy(id = "quantity")
@@ -27,10 +27,6 @@ public class ProductDetailsPage extends BasePage{
 
 
     public void fillProductReview() {
-        actions.click(nameBox)
-                .sendKeys(ConfigurationReader.get("firstName") + Keys.TAB)
-                .sendKeys(ConfigurationReader.get("email") +  Keys.TAB)
-                .sendKeys("myReview" + Keys.TAB + Keys.ENTER)
-                .perform();
+        actions.click(nameBox).sendKeys(ConfigurationReader.get("firstName") + Keys.TAB).sendKeys(ConfigurationReader.get("email") + Keys.TAB).sendKeys("myReview" + Keys.TAB + Keys.ENTER).perform();
     }
 }
