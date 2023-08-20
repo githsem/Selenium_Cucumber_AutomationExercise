@@ -1,5 +1,5 @@
 @regression
-Feature: Register Feature
+Feature: Register
 
   @register
   Scenario: Register on the web page
@@ -18,7 +18,7 @@ Feature: Register Feature
     #Then Verify that "ACCOUNT DELETED!" is visible
     #And The user clicks Continue2 button
 
-  @RegisterError
+  @smoke @RegisterError
   Scenario: Register User with existing email
     Given The user is on the home page
     When The user clicks "Signup / Login" menu button

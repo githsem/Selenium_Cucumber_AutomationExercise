@@ -20,7 +20,7 @@ public class Register_StepDefs {
     public void the_user_is_on_the_home_page() {
         Driver.get().get(ConfigurationReader.get("url"));
         String expectedUrl = "https://www.automationexercise.com/";
-        Assert.assertEquals(Driver.get().getCurrentUrl(),expectedUrl);
+        Assert.assertEquals(Driver.get().getCurrentUrl(), expectedUrl);
     }
 
     @When("The user clicks {string} menu button")
@@ -30,7 +30,7 @@ public class Register_StepDefs {
             Driver.get().switchTo().frame("aswift_9");
             Driver.get().switchTo().frame("ad_iframe");
             registerPage.dismissButton.click();
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -40,7 +40,7 @@ public class Register_StepDefs {
     public void verify_new_user_signup_is_visible() {
         String expectedText = "New User Signup!";
         String actualText = registerPage.newUserSignupText.getText();
-        Assert.assertEquals(expectedText,actualText);
+        Assert.assertEquals(expectedText, actualText);
     }
 
     @When("The user enters name and email address")
@@ -58,7 +58,7 @@ public class Register_StepDefs {
     public void verify_that_enter_account_information_is_visible() {
         String expectedText = "ENTER ACCOUNT INFORMATION";
         String actualText = registerPage.enterAccountText.getText();
-        Assert.assertEquals(expectedText,actualText);
+        Assert.assertEquals(expectedText, actualText);
     }
 
     @When("The user fills in account information")
@@ -70,7 +70,7 @@ public class Register_StepDefs {
     public void verify_that_account_created_is_visible() {
         String expectedText = "ACCOUNT CREATED!";
         String actualText = registerPage.accountText.getText();
-        Assert.assertEquals(expectedText,actualText);
+        Assert.assertEquals(expectedText, actualText);
     }
 
     @When("The user clicks Continue button")
@@ -86,9 +86,9 @@ public class Register_StepDefs {
 
     @Then("Verify that Logged in as username is visible")
     public void verify_that_logged_in_as_username_is_visible() {
-        String expectedText = "Logged in as "+ ConfigurationReader.get("firstName");
+        String expectedText = "Logged in as " + ConfigurationReader.get("firstName");
         String actualText = registerPage.loggedInText.getText();
-        Assert.assertEquals(expectedText,actualText);
+        Assert.assertEquals(expectedText, actualText);
     }
 
     @When("The user clicks Delete Account button")
@@ -99,7 +99,7 @@ public class Register_StepDefs {
     @Then("Verify that {string} is visible")
     public void verify_that_is_visible(String expectedText) {
         String actualText = registerPage.accountDeletedText.getText();
-        Assert.assertEquals(expectedText,actualText);
+        Assert.assertEquals(expectedText, actualText);
     }
 
     @When("The user clicks Continue2 button")
