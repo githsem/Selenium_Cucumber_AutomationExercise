@@ -1,7 +1,7 @@
 @regression
 Feature: View and Cart
 
-  @viewcart
+  @smoke @viewcart
   Scenario: View & Cart Brand Products
     Given The user is on the home page
     When The user clicks "Products" menu button
