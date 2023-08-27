@@ -1,3 +1,4 @@
+@regression
 Feature: Verify Subscription
 
   @subscription
