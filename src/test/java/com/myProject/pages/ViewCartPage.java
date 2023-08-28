@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ViewCartPage extends BasePage{
+public class ViewCartPage extends BasePage {
     @FindBy(xpath = "//tbody/tr")
     public List<WebElement> addedCardProducts;
 
