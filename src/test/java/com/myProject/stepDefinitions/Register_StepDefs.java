@@ -33,7 +33,6 @@ public class Register_StepDefs {
         } catch (Exception e) {
 
         }
-
     }
 
     @Then("Verify New User Signup! is visible")
