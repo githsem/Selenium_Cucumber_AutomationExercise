@@ -24,7 +24,7 @@ public class Search_StepDefs {
 
     @Then("Verify all the products related to search are visible")
     public void verify_all_the_products_related_to_search_are_visible() {
-        Assert.assertTrue(searchPage.searchedProducts.size() == 1);
+        Assert.assertEquals(1, searchPage.searchedProducts.size());
     }
 
 }
