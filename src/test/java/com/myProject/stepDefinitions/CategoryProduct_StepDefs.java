@@ -2,12 +2,10 @@ package com.myProject.stepDefinitions;
 
 import com.myProject.pages.CategoryProductPage;
 import com.myProject.utilities.BrowserUtils;
-import com.myProject.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.util.Set;
 
 public class CategoryProduct_StepDefs {
     CategoryProductPage categoryProductPage = new CategoryProductPage();
