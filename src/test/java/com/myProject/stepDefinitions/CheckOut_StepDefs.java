@@ -1,8 +1,6 @@
 package com.myProject.stepDefinitions;
 
 import com.myProject.pages.CheckOutPage;
-import com.myProject.pages.PaymentPage;
-import com.myProject.pages.ViewCartPage;
 import com.myProject.utilities.ConfigurationReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
