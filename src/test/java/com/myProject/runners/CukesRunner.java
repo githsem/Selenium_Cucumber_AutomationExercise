@@ -16,5 +16,5 @@ import org.junit.runner.RunWith;
         tags = "@testcase"
 
 )
-public class CukesRunner {
+public class CukesRunner{
 }
